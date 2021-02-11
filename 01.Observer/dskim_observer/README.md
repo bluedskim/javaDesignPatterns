@@ -1,6 +1,6 @@
 # Observer 패턴(김동석)
 
-### 개요
+## 개요
 
 * PropertyChangeSupport 를 사용한 observer 패턴 샘플
 * 클래스 다이어그램 <br/>
@@ -9,7 +9,7 @@
   * observable : NewsAgency.java
   * observer : NewsChannel.java
 
-### 참고
+## 참고
 
 * [baeldung : The Observer Pattern in Java](https://github.com/eugenp/tutorials/tree/master/patterns/design-patterns-behavioral/src/main/java/com/baeldung/observer)
 * [wikipedia : Observer pattern](https://en.wikipedia.org/wiki/Observer_pattern)
