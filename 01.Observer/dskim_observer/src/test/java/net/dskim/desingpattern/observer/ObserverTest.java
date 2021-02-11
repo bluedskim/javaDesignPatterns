@@ -9,16 +9,20 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class ObserverTest {
 
-    @Test
-    public void whenChangingPCLNewsAgencyState_thenONewsChannelNotified() {
+	@Test
+	public void whenChangingPCLNewsAgencyState_thenONewsChannelNotified() {
+		String newsName = "뉴스 제목";
 
-        NewsAgency observable = new NewsAgency();
-        NewsChannel observer = new NewsChannel();
+		NewsAgency observable = new NewsAgency();
+		NewsChannel observer1 = new NewsChannel();
+		NewsChannel observer2 = new NewsChannel();
 
-        observable.addPropertyChangeListener(observer);
-        observable.setNews("news");
+		observable.addPropertyChangeListener(observer1);
+		observable.addPropertyChangeListener(observer2);
+		observable.setNews(newsName);
 
-        log.info("observer.getNews()={}", observer.getNews());
-        assertEquals(observer.getNews(), "news");
-    }
+		log.info("observer.getNews()={}", observer1.getNews());
+		assertEquals(observer1.getNews(), newsName);
+		assertEquals(observer2.getNews(), newsName);
+	}
 }
