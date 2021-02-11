@@ -3,9 +3,9 @@ package net.dskim.desingpattern.observer;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
-public class PCLNewsChannel implements PropertyChangeListener {
+public class NewsChannel implements PropertyChangeListener {
 
-    private String theMostRescentNews;
+    private String theMostRecentNews;
 
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
@@ -13,10 +13,10 @@ public class PCLNewsChannel implements PropertyChangeListener {
     }
 
     public String getNews() {
-        return theMostRescentNews;
+        return theMostRecentNews;
     }
 
     public void setNews(String news) {
-        this.theMostRescentNews = news;
+        this.theMostRecentNews = news;
     }
 }

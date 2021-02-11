@@ -12,8 +12,8 @@ public class ObserverTest {
     @Test
     public void whenChangingPCLNewsAgencyState_thenONewsChannelNotified() {
 
-        PCLNewsAgency observable = new PCLNewsAgency();
-        PCLNewsChannel observer = new PCLNewsChannel();
+        NewsAgency observable = new NewsAgency();
+        NewsChannel observer = new NewsChannel();
 
         observable.addPropertyChangeListener(observer);
         observable.setNews("news");

@@ -1,7 +1,25 @@
-@startuml
+@startuml Observer 패턴(김동석)
+
+title Observer 패턴(김동석)
+
 interface PropertyChangeListener
 
+class NewsAgency {
+    PropertyChangeSupport support
+    void addPropertyChangeListener(PropertyChangeListener pcl)
+    void removePropertyChangeListener(PropertyChangeListener pcl)
+    void setNews(String news)
+}
 
-PCLNewsAgency   
+class NewsChannel {
+    String theMostRecentNews
+    void propertyChange(PropertyChangeEvent evt)
+    String getNews()
+    void setNews(String news)
+}
+
+NewsAgency ..> PropertyChangeSupport
+NewsChannel ..|> PropertyChangeListener
+PropertyChangeSupport o- PropertyChangeListener
 
 @enduml

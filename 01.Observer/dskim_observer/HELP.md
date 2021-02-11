@@ -1,13 +1,15 @@
 # Observer 패턴(김동석)
 
-### Reference Documentation
-For further reference, please consider the following sections:
+### 개요
 
-* [Official Gradle documentation](https://docs.gradle.org)
-* [Spring Boot Gradle Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.4.2/gradle-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.4.2/gradle-plugin/reference/html/#build-image)
+* PropertyChangeSupport 를 사용한 observer 패턴 샘플
+* 클래스 다이어그램 <br/>
+![Observer 패턴(김동석)](https://www.plantuml.com/plantuml/png/fP8zJWCn48LxdsBAtO8zGfG8qV4dSWBZVMmiRMnhF74K0H95IYHg2deEGCELWDo1JLWfcsY3a71Zothp-Sqy3wDebjcqfelh24vWMZs-hfPlsSVxm-VJyzVo9LTAhDJuLM6TW6-q0Lso3s1P74-qgt1gey21bJArZf7ECO-Z2iuiw5PHitRbura8deNYpxvH96zBqcNP3yxwhocOEj-MCwO-uJ-425bxpyR2rbNacdEkxhjjhSiTwhQlLYSJdFaeLp1m6y2M67QUtNDnaXez8KdUfLMjYJ_uwWowA0RzOrPTsqLnDpWKNdz8_kXWs4EuilbKtm00 "Observer 패턴(김동석)")
+
 
 ### 참고
 
-* [Observer pattern(wikipedia)](https://en.wikipedia.org/wiki/Observer_pattern)
+* [baeldung : The Observer Pattern in Java](https://github.com/eugenp/tutorials/tree/master/patterns/design-patterns-behavioral/src/main/java/com/baeldung/observer)
+* [wikipedia : Observer pattern](https://en.wikipedia.org/wiki/Observer_pattern)
+
 

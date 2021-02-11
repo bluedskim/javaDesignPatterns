@@ -3,15 +3,12 @@ package net.dskim.desingpattern.observer;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 
-import lombok.extern.slf4j.Slf4j;
-
-@Slf4j
-public class PCLNewsAgency {
+public class NewsAgency {
     private String news;
 
     private PropertyChangeSupport support;
 
-    public PCLNewsAgency() {
+    public NewsAgency() {
         support = new PropertyChangeSupport(this);
     }
 
@@ -23,9 +20,9 @@ public class PCLNewsAgency {
         support.removePropertyChangeListener(pcl);
     }
 
-    public void setNews(String value) {
-        support.firePropertyChange("news", this.news, value);
-        this.news = value;
+    public void setNews(String news) {
+        support.firePropertyChange("news", this.news, news);
+        this.news = news;
 
     }
 }
