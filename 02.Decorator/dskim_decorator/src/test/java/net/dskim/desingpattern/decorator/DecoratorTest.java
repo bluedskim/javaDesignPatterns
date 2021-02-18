@@ -31,5 +31,10 @@ public class DecoratorTest {
 		printBeverage(greenTeaWithSugar);
 		assertEquals("Green leaf tea + Sugar", greenTeaWithSugar.getDescription());
 		assertEquals(9.0, greenTeaWithSugar.getCost());
+
+		BeverageBase greenTeaWithCholate = new ChocolateCondiment(new GreenTea());
+		printBeverage(greenTeaWithCholate);
+		assertEquals("Green leaf tea + Chocolate", greenTeaWithCholate.getDescription());
+		assertEquals(12.0, greenTeaWithCholate.getCost());
 	}
 }

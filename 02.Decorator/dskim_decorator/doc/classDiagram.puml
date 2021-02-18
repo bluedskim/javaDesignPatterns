@@ -1,25 +1,51 @@
-@startuml Observer 패턴(김동석)
+@startuml Decorator 패턴(김동석)
 
-title Observer 패턴(김동석)
+title Decorator 패턴(김동석)
 
-interface PropertyChangeListener
-
-class NewsAgency {
-    PropertyChangeSupport support
-    void addPropertyChangeListener(PropertyChangeListener pcl)
-    void removePropertyChangeListener(PropertyChangeListener pcl)
-    void setNews(String news)
+abstract class BeverageBase {
+	protected String description
+	public String getDescription()
+	public abstract double getCost()
 }
 
-class NewsChannel {
-    String theMostRecentNews
-    void propertyChange(PropertyChangeEvent evt)
-    String getNews()
-    void setNews(String news)
+class BlackTea {
+	public double getCost()
 }
 
-NewsAgency ..> PropertyChangeSupport
-NewsChannel ..|> PropertyChangeListener
-PropertyChangeSupport o- PropertyChangeListener
+class Espresso {
+	public double getCost()
+}
 
+class GreenTea {
+	public double getCost()
+}
+
+abstract class CondimentsDecoratorBase {
+	protected BeverageBase beverage
+}
+
+class ChocolateCondiment {
+	public ChocolateCondiment(BeverageBase beverage)
+	public double getCost()
+}
+
+class MilkCondiment {
+	public MilkCondiment(BeverageBase beverage)
+	public double getCost()
+}
+
+class SugarCondiment {
+	public SugarCondiment(BeverageBase beverage)
+	public double getCost()
+}
+
+BeverageBase <|-- BlackTea
+BeverageBase <|-- Espresso
+BeverageBase <|-- GreenTea
+BeverageBase <|-- CondimentsDecoratorBase
+BeverageBase <.. CondimentsDecoratorBase
+
+CondimentsDecoratorBase <|-- ChocolateCondiment
+CondimentsDecoratorBase <|-- MilkCondiment
+CondimentsDecoratorBase <|-- SugarCondiment
 @enduml
