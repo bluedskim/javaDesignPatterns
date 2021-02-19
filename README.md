@@ -1,0 +1,12 @@
+01.Observer
+02.Decorator
+03.Factory
+04.Singleton
+05.Command
+06.Adapter
+07.Facade
+08.Template_Method
+09.Iterators
+10.Composite
+11.State
+12.Proxy
