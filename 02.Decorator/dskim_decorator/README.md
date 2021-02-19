@@ -1,27 +1,19 @@
 # Decorator 패턴(김동석)
-
 ## 개요
-
-### 왜 쓰는가?
-
-When we wish to add, enhance or even remove the behavior or state of objects leave others unchanged
-
-We use inheritance to extend the behavior of the class. This takes place at compile time, and all of the instances of that class get the extended behavior.
-
-Decorator design patterns allow us to add functionality to an object (not the class) at runtime, and we can apply this customized functionality to an individual object based on our requirement and choice.
-
-The decorator design pattern is a structural pattern, which provides a wrapper to the existing class.
-
-Decorator design patterns create decorator classes, which wrap the original class and provide additional functionality by keeping the class methods' signature unchanged.
-
-The decorator design pattern is structurally similar to the chain of responsibility pattern.
-
-* PropertyChangeSupport 를 사용한 observer 패턴 샘플
-* 클래스 다이어그램 <br/>
-![Observer 패턴(김동석)](https://www.plantuml.com/plantuml/png/fP8zJWCn48LxdsBAtO8zGfG8qV4dSWBZVMmiRMnhF74K0H95IYHg2deEGCELWDo1JLWfcsY3a71Zothp-Sqy3wDebjcqfelh24vWMZs-hfPlsSVxm-VJyzVo9LTAhDJuLM6TW6-q0Lso3s1P74-qgt1gey21bJArZf7ECO-Z2iuiw5PHitRbura8deNYpxvH96zBqcNP3yxwhocOEj-MCwO-uJ-425bxpyR2rbNacdEkxhjjhSiTwhQlLYSJdFaeLp1m6y2M67QUtNDnaXez8KdUfLMjYJ_uwWowA0RzOrPTsqLnDpWKNdz8_kXWs4EuilbKtm00 "Observer 패턴(김동석)")
-* 소스
-  * observable : NewsAgency.java
-  * observer : NewsChannel.java
+런타임에 객체에 동적으로 기능을 추가하기 위한 structural 패턴으로 래퍼wrapper 클래스로 구현. chain of responsibility pattern과 유사함
+## 클래스 다이어그램
+![Decorator 패턴(김동석)](https://www.plantuml.com/plantuml/png/dLCnKiCm4ApHArJQHV82YamSXeegVE0itnXD5CaZdMc06OgKp51JqFC06hu4v0yO4YiebfrCIjskTgLTQU88BDLBnMSeZ0Kobg-VtjQhz-Jpu_7h-ULxzPeoHf8K3bCWTsH141SAdEDJl4KB9Kx18RzZPvKrX8Amu7EoKfUyG2Uih4WQtQ1rhgHeeH9fjaEJrEFUep3D07-9cN7KC1uOs_eg48jhX3_FpQv-yeMhB3fdZY9VMaHzM7alXypeGYvHa_FfTIC9migtYvrpTcE4KK3enVwTeGicKRdqY2jUIRM8UGJpq-NdTGasfXy2fnW4MyxlHoF_429GMti4QakEG3rDxZ77uruYwtiB6_bEZyFye9DXQXWlcw0kcX__0m00 "Decorator 패턴(김동석)")
+## 소스
+* 꾸며질decorated 객체
+  * BeverageBase.java : 부모 abstract 객체
+  * BlackTea.java
+  * Espresso.java
+  * GreenTea.java
+* 꾸미는decorator 객체 
+  * CondimentsDecoratorBase.java : 부모 abstract 객체
+  * CholateCondiment.java
+  * MilkCondiment.java
+  * SugarCondiment.java
 
 ## 참고
 
