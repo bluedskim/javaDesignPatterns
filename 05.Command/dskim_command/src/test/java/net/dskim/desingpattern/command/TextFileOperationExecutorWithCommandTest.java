@@ -19,5 +19,9 @@ public class TextFileOperationExecutorWithCommandTest {
 		String saveTextFileOperation = textFileOperationExecutor.executeOperation(new SaveTextFileOperation(new TextFile("file2.txt")));
 		log.info("saveTextFileOperation={}", saveTextFileOperation);
 		assertEquals("Saving file file2.txt", saveTextFileOperation);
+		
+		String udateTextFileOperation = textFileOperationExecutor.executeOperation(new UpdateTextFileOperation(new TextFile("file2.txt")));
+		log.info("udateTextFileOperation={}", udateTextFileOperation);
+		assertEquals("Updating file file2.txt", udateTextFileOperation);
 	}
 }

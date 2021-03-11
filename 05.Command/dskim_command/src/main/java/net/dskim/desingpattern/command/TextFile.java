@@ -14,4 +14,7 @@ public class TextFile {
 	public String save() {
 		return "Saving file " + name;
 	}
+	public String update() {
+		return "Updating file " + name;
+	}
 }
