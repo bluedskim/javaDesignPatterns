@@ -3,7 +3,7 @@ package net.dskim.desingpattern.command;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TextFileOperationExecutor {
+public class TextFileOperationExecutorWithCommand {
 	/**
 	 * 실행 이력 저장용
 	 */

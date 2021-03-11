@@ -7,10 +7,10 @@ import org.junit.jupiter.api.Test;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class TextFileOperationExecutorTest {
+public class TextFileOperationExecutorWithCommandTest {
 	@Test
 	public void executeOperationTest() {
-		TextFileOperationExecutor textFileOperationExecutor = new TextFileOperationExecutor();
+		TextFileOperationExecutorWithCommand textFileOperationExecutor = new TextFileOperationExecutorWithCommand();
 
 		String openTextFileOperationResult = textFileOperationExecutor.executeOperation(new OpenTextFileOperation(new TextFile("file1.txt")));
 		log.info("openTextFileOperationResult={}", openTextFileOperationResult);

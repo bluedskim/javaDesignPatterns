@@ -5,7 +5,7 @@ package net.dskim.desingpattern.command;
  * if-else 혹은 switch-case를 사용해야 함
  * 새로운 처리가 추가 되는 경우 이 소스를 고쳐야 함
  */
-public class TextFileOperator {
+public class TextFileOperationExceutorWithoutCommand {
 	String execute(TextFile textFile, String whatToDo) {
 		String executeResult = null;
 		switch(whatToDo) {
