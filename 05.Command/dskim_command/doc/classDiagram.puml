@@ -1,36 +1,41 @@
-@startuml Factory Method 패턴(김동석)
+@startuml Command Method 패턴(김동석)
 
 hide empty members
 hide empty methods
 
-title Factory Method 패턴(김동석)
+title Command 패턴(김동석)
 header https://github.com/bluedskim/javaDesignPatterns
 footer 작성시각 %date("yyyy.MM.dd' 'HH:mm")
 
-interface Shape {
-	String draw()
+class TextFile {
+	String open()
+	String save()
 }
 
-class Circle {
-	String draw()
+interface TextFileOperation {
+	String execute()
 }
 
-class Rectangle {
-	String draw()
+class OpenTextFileOperation {
+	public OpenTextFileOperation(TextFile textFile)
+	String execute()
 }
 
-class Square {
-	String draw()
+class SaveTextFileOperation {
+	public SaveTextFileOperation(TextFile textFile)
+	String execute()
 }
 
-class ShapeFactory {
-	Shape getShape(String shapeType)
+class TextFileOperationExecutorWithCommand {
+	String executeOperation(TextFileOperation textFileOperation)
 }
 
-Shape <|-- Circle
-Shape <|-- Rectangle
-Shape <|-- Square
+TextFileOperation <|.. OpenTextFileOperation
+TextFileOperation <|.. SaveTextFileOperation
 
-FactoryMethodTest --> ShapeFactory : getShape(도형형태)
-ShapeFactory --> Shape : 해당 도형 생성자 호출
+OpenTextFileOperation --> TextFile
+SaveTextFileOperation --> TextFile
+
+TextFileOperationExecutorWithCommand --> TextFileOperation
+
 @enduml
