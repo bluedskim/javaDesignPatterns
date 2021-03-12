@@ -11,6 +11,8 @@
 
 ## 클래스 다이어그램
 
+![Command Method 패턴(김동석)](https://www.plantuml.com/plantuml/png/bLFFIyCm63sRlo8CPErXxNs83Fp1BaDXWkUq-RP6cwGqNyU62WgxAOX7GJrxLF3YlpIx_y4uPzri7PfJykMzxxsyZxGCiXGp6TCjBILJd7O08ytfzEfnEdvn9g_dRzUt-VZU9IGI72Z814TKWWmWDSkb3vuX10N6KBGhzuc0SKXfX9YOfk_t1KPPu8LQ-a6S0JV7Glf7RC2smOY-scU8a2f3UbhR3SqVRlBnStvvDtcweEkS8JYraLrUf-DnNgVrThifPStQ3MDc33s08UuAQ-Y4h7Kn5QfFTGBASOkZOGEmnpD2XB8AFHP2mTfB86Kej5gWmn323EUKJn4BKvMK90jY4LRVEuKrd6_SLHfTQtELHkNzFpLA_9qPHgU7TaXV4oqbKLRxzeS_ApErCcxZrFEgO_eDNFbUGgf7qMXi5eyZrKakGSYVabYaB5XeWUBsHxq3 "Command Method 패턴(김동석)")
+
 ## 소스
 1. client : command를 초기화하고 invoker를 호출
     * TextFileOperationExecutorWithoutCommandTest.java : command를 사용하지 않은 샘플 테스트용
