@@ -1,5 +1,8 @@
 package net.dskim.desingpattern.command;
 
+/**
+ * 파일갱신 command
+ */
 public class UpdateTextFileOperation implements TextFileOperation {
 	private TextFile textFile;
 
