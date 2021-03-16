@@ -1,41 +1,50 @@
-@startuml Command Method 패턴(김동석)
+@startuml Adapter 패턴(김동석)
 
 hide empty members
 hide empty methods
 
-title Command 패턴(김동석)
+title Adapter 패턴(김동석)
 header https://github.com/bluedskim/javaDesignPatterns
 footer 작성시각 %date("yyyy.MM.dd' 'HH:mm")
 
-class TextFile {
-	String open()
-	String save()
+
+interface LightningPhone {
+	String recharge()
+	void useLightning()
 }
 
-interface TextFileOperation {
-	String execute()
+interface MicroUsbPhone {
+	String recharge()
+	void useMicroUsb()
 }
 
-class OpenTextFileOperation {
-	public OpenTextFileOperation(TextFile textFile)
-	String execute()
+class Iphone {
+	String recharge()
+	void useLightning()
 }
 
-class SaveTextFileOperation {
-	public SaveTextFileOperation(TextFile textFile)
-	String execute()
+class Android {
+	String recharge()
+	void useMicroUsb()
 }
 
-class TextFileOperationExecutorWithCommand {
-	String executeOperation(TextFileOperation textFileOperation)
+class LightningToMicroUsbAdapter {
+	private final LightningPhone lightningPhone
+	LightningToMicroUsbAdapter(LightningPhone lightningPhone)
+	String recharge()
+	void useMicroUsb()
 }
 
-TextFileOperation <|.. OpenTextFileOperation
-TextFileOperation <|.. SaveTextFileOperation
+class LightningToMicroUsbAdapterTest {
+	String rechargeMicroUsbPhone(MicroUsbPhone microUsbPhone)
+}
 
-OpenTextFileOperation --> TextFile
-SaveTextFileOperation --> TextFile
+LightningPhone <|.. Iphone
+MicroUsbPhone <|.. LightningToMicroUsbAdapter
+MicroUsbPhone <|.. Android
 
-TextFileOperationExecutorWithCommand --> TextFileOperation
+LightningToMicroUsbAdapter --> LightningPhone
+
+LightningToMicroUsbAdapterTest --> MicroUsbPhone
 
 @enduml
