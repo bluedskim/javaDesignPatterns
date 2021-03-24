@@ -2,6 +2,9 @@ package net.dskim.desingpattern.template_method.implement_interface;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 해당 클래스에 특화된 메소드가 구현되어있는 클래스
+ */
 @Slf4j
 public class Mario implements Game {
 	@Override
