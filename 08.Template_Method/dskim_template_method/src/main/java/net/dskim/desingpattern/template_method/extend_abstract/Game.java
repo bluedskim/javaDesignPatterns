@@ -1,9 +1,9 @@
-package net.dskim.desingpattern.template_method;
+package net.dskim.desingpattern.template_method.extend_abstract;
 
 public abstract class Game {
-	abstract String initialize();
-	abstract String startPlay();
-	abstract String endPlay();
+	protected abstract String initialize();
+	protected abstract String startPlay();
+	protected abstract String endPlay();
 
 	public final String play() {
 		String initializeResult = initialize();

@@ -1,13 +1,13 @@
-package net.dskim.desingpattern.template_method;
+package net.dskim.desingpattern.template_method.extend_abstract;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-public class TemplateMethodTest {
+class TemplateMethodTest {
 
 	@Test
-	public void gamePlayTest() {
+	void gamePlayTest() {
 		Game mario = new Mario();
 		Game tankfight = new Tankfight();
 		

@@ -1,25 +1,25 @@
-package net.dskim.desingpattern.template_method;
+package net.dskim.desingpattern.template_method.extend_abstract;
 
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class Tankfight extends Game {
 	@Override
-	String initialize() {
+	protected String initialize() {
 		String rtn = "Tankfight initialize.";
 		log.info(rtn);
 		return rtn;
 	}
 
 	@Override
-	String startPlay() {
+	protected String startPlay() {
 		String rtn = "Tankfight startPlay.";
 		log.info(rtn);
 		return rtn;
 	}
 
 	@Override
-	String endPlay() {
+	protected String endPlay() {
 		String rtn = "Tankfight endPlay.";
 		log.info(rtn);
 		return rtn;

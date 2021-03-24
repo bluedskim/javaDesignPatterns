@@ -1,25 +1,25 @@
-package net.dskim.desingpattern.template_method;
+package net.dskim.desingpattern.template_method.implement_interface;
 
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class Mario extends Game {
+public class Mario implements Game {
 	@Override
-	String initialize() {
+	public String initialize() {
 		String rtn = "Mario initialize.";
 		log.info(rtn);
 		return rtn;
 	}
 
 	@Override
-	String startPlay() {
+	public String startPlay() {
 		String rtn = "Mario startPlay.";
 		log.info(rtn);
 		return rtn;
 	}
 
 	@Override
-	String endPlay() {
+	public String endPlay() {
 		String rtn = "Mario endPlay.";
 		log.info(rtn);
 		return rtn;
