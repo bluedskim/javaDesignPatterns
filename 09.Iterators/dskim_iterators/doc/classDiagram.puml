@@ -1,0 +1,39 @@
+@startuml Template Method 패턴(김동석)
+
+hide empty members
+hide empty methods
+
+title Template Method 패턴(김동석)
+header https://github.com/bluedskim/javaDesignPatterns
+footer 작성시각 %date("yyyy.MM.dd' 'HH:mm")
+
+
+abstract class Game {
+	public String play()
+	abstract String initialize();
+	abstract String startPlay();
+	abstract String endPlay();
+}
+
+class Mario {
+	String initialize();
+	String startPlay();
+	String endPlay();
+}
+
+class Tankfight {
+	String initialize();
+	String startPlay();
+	String endPlay();
+}
+
+class TemplateMethodTest {
+	void templateMethodTest()
+}
+
+Game <|-- Mario
+Game <|-- Tankfight
+
+TemplateMethodTest --> Game
+
+@enduml
