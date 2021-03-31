@@ -39,7 +39,8 @@ public class IteratorTest {
 			,"Kim"
 		};
 
-		Iterator<Object> arrayIterator = new ArrayIterator(names);
+		Iterable<Object> arrayContainer = new ArrayContainer(names);
+		Iterator<Object> arrayIterator = arrayContainer.iterator();
 		int i = 0;
 		while (arrayIterator.hasNext()) {
 			assertEquals(names[i++], arrayIterator.next());
