@@ -1,0 +1,41 @@
+@startuml Iterator 패턴(김동석)
+
+hide empty members
+hide empty methods
+
+title Iterator 패턴(김동석)
+header https://github.com/bluedskim/javaDesignPatterns
+footer 작성시각 %date("yyyy.MM.dd' 'HH:mm")
+
+
+interface Iterator<E> {
+	public boolean hasNext();
+	public E next();	
+}
+
+class ArrayIterator {
+	public boolean hasNext();
+	public Object next();
+	Object[] array;
+	int index = 0;
+}
+
+interface Iterable<T> {
+	public abstract java.util.Iterator<T> iterator();
+}
+
+class ArrayContainer {
+	public Iterator<Object> iterator()
+}
+
+class IteratorTest {
+	void arrayIteratorTest()
+}
+
+Iterable <|-- ArrayContainer
+Iterator <|-- ArrayIterator
+
+IteratorTest --> Iterable
+IteratorTest --> Iterator
+
+@enduml
