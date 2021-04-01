@@ -1,34 +1,30 @@
-# Tempate Method 패턴(김동석)
+# Iterator 패턴(김동석)
 
 ## 패턴 다이어그램
 
-![Design patterns: Template Method](https://steemitimages.com/DQmRbBeqNZykcGGhvat7hHyfZhqFu3ypgGm19L6FkuvbFCG/templatemethod.png "Design patterns: Template Method")
-
-(출처:https://steemit.com/design-patterns/@slawas/design-patterns-template-method)
+![Iterators implement various traversal algorithms. Several iterator objects can traverse the same collection at the same time.](https://refactoring.guru/images/patterns/diagrams/iterator/solution1-2x.png "Iterators implement various traversal algorithms. Several iterator objects can traverse the same collection at the same time.")
+"하나의 집합Collection의 모든 요소를 모두 접근하는 방법은 여러가지가 있을 수 있다"
+(출처:https://refactoring.guru/design-patterns/iterator)
 
 ## 특징/용도
-1. behavioral design patterns의 일종
-1. 상위의 추상클래스에서 처리할 로직의 뼈대(알고리즘)를 정의하고 자식 클래스에서 각 살들을 구현하도록하여 상위 처리로직의 아웃라인을 재사용.
-1. 템플리트 메소드내에서 각 단게들에 대한 처리는 자식 클래스에게 맡기기 때문에 일종의 IoC(Inversion of Control)라고 할 수 있다.
+1. behavioral design patterns의 하나
+1. 집합collection의 각각 항목 모두를 접근할 수 있는 일관된 방법을 제공하는데 목적이 있다. 이 방법은 그 집합의 실제 구현과는 무관하다(Information Hiding, Separation of concerns).
 
 ## 고려사항
 
-1. 자식 객체들은 템플리트 메소드 자체를 override하면 안된다.
-1. 부모 추상 객체를 사용하는 대신 인터페이스로 만들 수도 있다. 하지만 이 경우 모든 메소드는 public 으로 접근가능하므로 주의가 필요 
+1. Java 1.2 부터 Iterable, Iterator 인터페이스가 포함되어 있으므로 직접 만들 필요가 없다.
 
 ## 클래스 다이어그램
 
-![Template Method 패턴(김동석)](https://www.plantuml.com/plantuml/png/hL9DIyD043sxls8eIDD3cdiLwK6mbq31_e5DTfgitKtAxgHGFq2XDmNnAAXdZmfU_4ir_GzkqrgK1l7WddRdpRptPcQxbhYXGYiOe1uhJWWXKfeBMDmyBsPltlpzykFslfmzjXXBfK1mQJG5ZJf2Ot-6bdMMCPAay0zyANA11bAYiUq4GI8fBQ9sdEiWKWKAEv8wEE4JVeXM9bcV4w79B1lckRj0-NHNpbxBwuVvonNi2gVaDQRkjCEmBKGJchrUH-k6iyruPCdmc21Mt5euuXhXZEsCYqZ968x9o2m1PtRgjTZE9daTbvaaoPKyHQ-rjmrNy-jNjJKePk8Bks1i9Hzo8_EbVhr0BUylT0EUZOOoIUaVATUhMsrkWBRYdkHI06r1RcQki9hf_hdlhzhxzjxuOwo6r_SFgdqmrdLEt3_y1000 "Template Method 패턴(김동석)")
+![Iterator 패턴(김동석)](https://www.plantuml.com/plantuml/png/ZPAnIWD148Rhx5CC0J4fSh7M61GDn29gOISMUxUJtEhjRhYT4uCA2kaKn59GQqi56ryfdk_WdcSk5q5ngzcP_V_vPjWrIpocH4MmHHXpCZ5yN3zzZ5zhaxUBzvkxTFnGPooK0W7La4QWKFaOs_aKXKPOnaXIX7yPXSW5nX0I3UroipcG52Q-5nZLzAC4XJsIgdd8Z_acMZdGkvoSbRQiRumB87syJSSlwTNzvFaI5WGdh5L7xdYzdYV48YnskyjALHqlaze9-ZoOqRGwRJXbbM7YHp80tvW8kOQGssqyeLfzfIXrGEUP2ZjdB8YujR0UntnKpFKlcnt_40EQUh5AVjy_09vvkOH31Aa5di0gBAralNv0-n6szihGtBSKSsUQhSXBI4PUCPrxAB_ZhDqy-ORHnAN6CdgXpC7Ayfbw-cWFBMNQOoD5Fa2vaYkcpD0wQpH-z6N5xcR5QOgnkIwDHhiO_vVAbsWDjN3VzXC0 "Iterator 패턴(김동석)")
 
 ## 소스
-1. template method : Game.java.play()
-1. target : Mario.java, Tankfight.java 
-1. client : TemplateMethodTest.java
+1. target : ArrayIterator.java, ArrayContainer.java
+1. client : IteratorTest.java
 
 ## 참고
 
-* [wikipedia : Template method pattern](https://en.wikipedia.org/wiki/Template_method_pattern)
-* [baeldung : Implementing the Template Method Pattern in Java](https://www.baeldung.com/java-template-method-pattern)
-* [tutorialspoint : Design Patterns - Template Pattern](https://www.tutorialspoint.com/design_pattern/template_pattern.htm)
-* [dzone : Using Template Method Design Pattern In Java](https://dzone.com/articles/using-template-method-design-pattern-in-java)
-* [steemit : Design patterns: Template Method](https://steemit.com/design-patterns/@slawas/design-patterns-template-method)
+* [wikipedia : Iterator pattern](https://en.wikipedia.org/wiki/Iterator_pattern)
+* [tutorialspoint : Design Patterns - Iterator Pattern](https://www.tutorialspoint.com/design_pattern/iterator_pattern.htm)
+* [dzone : Iterator Design Pattern In Java](https://dzone.com/articles/iterator-design-pattern-in-java)
+* [refactoring.guru : Design Patterns / Behavioral Patterns / Iterator](https://refactoring.guru/design-patterns/iterator)
