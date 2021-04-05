@@ -15,19 +15,23 @@ public class CompositeTest {
 		Menu ramen = new Noodle(2);
 		Menu jjajang = new Noodle(3);
 
+		// 라면 + 공기밥 세트메뉴
 		AggregateMenu ramenRice = new SetMenu();
 		ramenRice.addMenu(ramen);
 		ramenRice.addMenu(rice);
 
+		// 짜장밥 세트메뉴
 		AggregateMenu jjajangRice = new SetMenu();
 		jjajangRice.addMenu(jjajang);
 		jjajangRice.addMenu(rice);
 
+		// 주문 목록
 		List<Menu> orderedMenus = new ArrayList<>();
 		orderedMenus.add(ramen);//2
 		orderedMenus.add(ramenRice);//3
 		orderedMenus.add(jjajangRice);//4
 
+		//총 주문액
 		int totalPrice = 0 ;
 
 		for(Menu menu : orderedMenus) {
