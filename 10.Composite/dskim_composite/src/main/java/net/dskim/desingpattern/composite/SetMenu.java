@@ -6,13 +6,14 @@ import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class SetMenu implements Menu {
+public class SetMenu implements AggregateMenu {
 	List<Menu> menus ;
 	
 	public SetMenu() {
 		menus = new ArrayList<>();
 	}
 
+	@Override
 	public void addMenu(Menu menu) {
 		menus.add(menu);
 	}

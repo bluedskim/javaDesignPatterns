@@ -11,15 +11,15 @@ public class CompositeTest {
 
 	@Test
 	void compositeTest() {
-		Rice rice = new Rice(1);
-		Noodle ramen = new Noodle(2);
-		Noodle jjajang = new Noodle(3);
+		Menu rice = new Rice(1);
+		Menu ramen = new Noodle(2);
+		Menu jjajang = new Noodle(3);
 
-		SetMenu ramenRice = new SetMenu();
+		AggregateMenu ramenRice = new SetMenu();
 		ramenRice.addMenu(ramen);
 		ramenRice.addMenu(rice);
 
-		SetMenu jjajangRice = new SetMenu();
+		AggregateMenu jjajangRice = new SetMenu();
 		jjajangRice.addMenu(jjajang);
 		jjajangRice.addMenu(rice);
 
