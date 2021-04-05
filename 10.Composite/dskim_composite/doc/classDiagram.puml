@@ -3,39 +3,43 @@
 hide empty members
 hide empty methods
 
-title Iterator 패턴(김동석)
+title Composite 패턴(김동석)
 header https://github.com/bluedskim/javaDesignPatterns
 footer 작성시각 %date("yyyy.MM.dd' 'HH:mm")
 
 
-interface Iterator<E> {
-	public boolean hasNext();
-	public E next();	
+interface Menu {
+	public int getPrice();
 }
 
-class ArrayIterator {
-	public boolean hasNext();
-	public Object next();
-	Object[] array;
-	int index = 0;
+interface AggregateMenu {
+	public void addMenu(Menu menu);
 }
 
-interface Iterable<T> {
-	public abstract java.util.Iterator<T> iterator();
+class Noodle {
+	public int getPrice();
 }
 
-class ArrayContainer {
-	public Iterator<Object> iterator()
+class Rice {
+	public int getPrice();
+}
+
+class SetMenu {
+	List<Menu> menus
+	public int getPrice();
+	public void addMenu(Menu menu);
 }
 
 class IteratorTest {
-	void arrayIteratorTest()
+	void compositionTest()
 }
 
-Iterable <|-- ArrayContainer
-Iterator <|-- ArrayIterator
+Menu <|-- AggregateMenu
+Menu <|.. Noodle
+Menu <|.. Rice
+AggregateMenu <|.. SetMenu
 
-IteratorTest --> Iterable
-IteratorTest --> Iterator
+IteratorTest --> Menu
+IteratorTest --> AggregateMenu
 
 @enduml
