@@ -1,7 +1,7 @@
 package net.dskim.desingpattern.state.solution;
 
 public class Package {
-  private PackageState currentState = new OrderedState();
+	private PackageState currentState = new OrderedState();
 
 	public void setState(PackageState newState) {
 		this.currentState = newState;
