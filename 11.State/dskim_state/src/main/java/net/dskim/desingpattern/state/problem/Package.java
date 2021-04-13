@@ -18,6 +18,10 @@ public class Package {
 				return "orderer";
 			case "ReceivedState":
 				return "orderer,manager";
+			/* // CancelState 를 추가하는 경우 Package.java를 수정해야 한다.
+			case "CancelState":
+				return "shipper,manager";
+			*/
 			default:
 				return "shipper";
 		}

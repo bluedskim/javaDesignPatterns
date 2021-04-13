@@ -24,5 +24,10 @@ public class StateTest {
 		log.info("state={}", pkg.getState());
 		assertEquals("orderer,manager", pkg.getNotifyGetterList());
 
+		/* //CancelState를 추가하는 경우에도 Package 소스를 수정할 필요가 없다
+		pkg.setState(new CancelState());
+		log.info("state={}", pkg.getState());
+		assertEquals("shipper,manager", pkg.getNotifyGetterList());
+		*/
 	}
 }
