@@ -1,45 +1,46 @@
-@startuml Iterator 패턴(김동석)
+@startuml State 패턴(김동석)
 
 hide empty members
 hide empty methods
 
-title Composite 패턴(김동석)
+title State 패턴(김동석)
 header https://github.com/bluedskim/javaDesignPatterns
 footer 작성시각 %date("yyyy.MM.dd' 'HH:mm")
 
 
-interface Menu {
-	public int getPrice();
+interface PackageState {
+	public String getNotifyGetterList()
 }
 
-interface AggregateMenu {
-	public void addMenu(Menu menu);
+class OrdredState {
+	public String getNotifyGetterList()
 }
 
-class Noodle {
-	public int getPrice();
+class DelieveredState {
+	public String getNotifyGetterList()
 }
 
-class Rice {
-	public int getPrice();
+class ReceivedState {
+	public String getNotifyGetterList()
 }
 
-class SetMenu {
-	List<Menu> menus
-	public int getPrice();
-	public void addMenu(Menu menu);
+class Package {
+	private PackageState currentState;
+	public void setState(PackageState newState)
+	public PackageState getState()
+	public String getNotifyGetterList()
 }
 
-class IteratorTest {
-	void compositionTest()
+class StateTest {
+	void stateTest()
 }
 
-Menu <|-- AggregateMenu
-Menu <|.. Noodle
-Menu <|.. Rice
-AggregateMenu <|.. SetMenu
+PackageState <|.. OrdredState
+PackageState <|.. DelieveredState
+PackageState <|.. ReceivedState
 
-IteratorTest --> Menu
-IteratorTest --> AggregateMenu
+StateTest --> Package
+StateTest --> PackageState
+Package --> PackageState
 
 @enduml
