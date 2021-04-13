@@ -1,0 +1,46 @@
+@startuml State 패턴(김동석)
+
+hide empty members
+hide empty methods
+
+title State 패턴(김동석)
+header https://github.com/bluedskim/javaDesignPatterns
+footer 작성시각 %date("yyyy.MM.dd' 'HH:mm")
+
+
+interface PackageState {
+	public String getNotifyGetterList()
+}
+
+class OrdredState {
+	public String getNotifyGetterList()
+}
+
+class DelieveredState {
+	public String getNotifyGetterList()
+}
+
+class ReceivedState {
+	public String getNotifyGetterList()
+}
+
+class Package {
+	private PackageState currentState;
+	public void setState(PackageState newState)
+	public PackageState getState()
+	public String getNotifyGetterList()
+}
+
+class StateTest {
+	void stateTest()
+}
+
+PackageState <|.. OrdredState
+PackageState <|.. DelieveredState
+PackageState <|.. ReceivedState
+
+StateTest --> Package
+StateTest --> PackageState
+Package --> PackageState
+
+@enduml
