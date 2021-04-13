@@ -11,6 +11,10 @@ public class Package {
 		return this.currentState;
 	}
 
+	/**
+	 * 상태 변경시 알려줄 대상 목록 반환
+	 * @return
+	 */
 	public String getNotifyGetterList() {
 		return currentState.getNotifyGetterList();
 	}
