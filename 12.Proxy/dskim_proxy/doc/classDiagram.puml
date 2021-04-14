@@ -1,46 +1,33 @@
-@startuml State 패턴(김동석)
+@startuml Proxy 패턴(김동석)
 
 hide empty members
 hide empty methods
 
-title State 패턴(김동석)
+title Proxy 패턴(김동석)
 header https://github.com/bluedskim/javaDesignPatterns
 footer 작성시각 %date("yyyy.MM.dd' 'HH:mm")
 
 
-interface PackageState {
-	public String getNotifyGetterList()
+interface Resource {
+	public String process()
 }
 
-class OrdredState {
-	public String getNotifyGetterList()
+class HeavyResource {
+	public String process()
 }
 
-class DelieveredState {
-	public String getNotifyGetterList()
+class Proxy {
+	public String process()
 }
 
-class ReceivedState {
-	public String getNotifyGetterList()
+class ProxyTest {
+	void proxyTest()
 }
 
-class Package {
-	private PackageState currentState;
-	public void setState(PackageState newState)
-	public PackageState getState()
-	public String getNotifyGetterList()
-}
+Resource <|.. HeavyResource
+Resource <|.. Proxy
+Proxy -> HeavyResource
 
-class StateTest {
-	void stateTest()
-}
-
-PackageState <|.. OrdredState
-PackageState <|.. DelieveredState
-PackageState <|.. ReceivedState
-
-StateTest --> Package
-StateTest --> PackageState
-Package --> PackageState
+ProxyTest --> Resource
 
 @enduml
