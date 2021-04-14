@@ -4,12 +4,12 @@
 
 ![Proxy](https://refactoring.guru/images/patterns/content/proxy/proxy-2x.png?id=fb3d14e21c210a758d47 "Proxy")
 
-"특정 클래스 대신 그 클래스에 대한 인터페이스로 동작하는 래퍼 _wrapper_ 클래스를 이용한다"
+"특정 클래스 대신 그 클래스와 동일한 인터페이스를 구현한 래퍼 _wrapper_ 클래스 _Proxy_ 를 이용한다"
 
 ## 특징/용도
-1. proxy클래스는 요청을 그 대상엑 단순히 전달하는 목적(캐쉬)으로 사용하거나 대상 객체의 메소드를 호출하기 이전, 이후에 로직을 추가할 수 있다.
-1. client입장에서는 proxy를 사용하건나 proxy의 대상을 직접 사용하거나 차이는 없다.
-1. 지연된 초기화 Lazy initialization (virtual proxy) : 실제로 해당 객체가 필요한 시기에 초기화 하도록 한다.
+1. proxy클래스는 client의 요청을 subject에 단순히 전달하는 목적으로 사용하거나 subject의 메소드를 호출하기 이전, 이후에 특정 로직을 추가고자 할 때 사용한다.
+1. client입장에서는 proxy를 사용하든 subject를 사용하든 기능상 차이는 없다(black box).
+1. 지연된 초기화 Lazy initialization (virtual proxy) : 클래스 생성시 초기화 하는 것이 아니라 해당 객체의 메소드를 호출 할 때 초기화 하도록 함 
 
 ## 해결하려는 문제
 
@@ -19,14 +19,14 @@
 ## 고려사항
 
 1. 유사한 패턴과 비교
-   * Adapter provides a different interface to the wrapped object, Proxy provides it with the same interface, and Decorator provides it with an enhanced interface.
-   * Facade is similar to Proxy in that both buffer a complex entity and initialize it on its own. Unlike Facade, Proxy has the same interface as its service object, which makes them interchangeable.
-   * Decorator and Proxy have similar structures, but very different intents. Both patterns are built on the composition principle, where one object is supposed to delegate some of the work to another. The difference is that a Proxy usually manages the life cycle of its service object on its own, whereas the composition of Decorators is always controlled by the client.
-1. 현재 Proxy를 사용중인 클라이언트 목록을 관리할 수 있다. ex) 해당 목록이 비었다면 리소스를 해제하는 등의 처리작업 수행
+   * 어댑터 패턴은 subject와는 다른 인터페이스를 제공하는 반면 프록시는 동일한 인터페이스을 제공한다. 데코레이터 패턴은 subject보다 향상된(기능 추가) 인터페이스를 제공한다.
+   * 파사드 패턴은 복잡한 엔티티들의 초기화에 대한 버퍼를 제공한다는 점에서 proxy패턴과 유사하다. 하지만 프록시는 동일한 인터페이스을 제공한다는 점에서 차이가 있다. 
+   * 데코레이터 패턴과 프록시 패턴은 복합 _composition_ 을 사용한다는 점에서는 동일하지만 프록시 패턴은 subject 에 대한 라이프 사이클을 proxy내부에서 관리하는 반면 데코레이터 패턴에서는 클라이언트가 대상의 라이프사이클을 관리한다는 차이가 있다.
+1. Proxy내에서 클라이언트 목록을 관리할 수도 있다. 사용하는 클라이언트가 없다면 리소스를 해제하는 등의 처리작업 수행하고자 할 때 유용하다.
 
 ## 클래스 다이어그램
 
-![Proxy 패턴(김동석)](https://www.plantuml.com/plantuml/png/dLEzJiCm49xnKrYLK9EXoLuGwb293XGgu0MS-9gOnabbNu8gG0Af6qY84GawCuB4mYkLz1rm4re8b85wEj_TztDdkQMHAKnbH8-G8T3PpTDi_6fDtoxVR-_pyQDDI2WuK9137549qWEbgoaC4wu9GO4H_CaI0kEWQ8Wur4tN3GI6gUVuYNIzA0Mk1qAw9onZRT0YY7iC4LIiIJz9J43poLq-Vicl7wRFLtIJ6mchDZB7wNOTpkkqtkaqfQmPiqJ41j1dFj0UymSiWDBH6TaOfbuaVEDGYJYW0U1-Wg8_seMvrfxGQDdaWX0_ObhJ0yKLyFMmROW4PB0s_X1y4DcwwC-n2vmIsPoYiWa_LGfYB2vRI-ui4PngADDM1H33QH7Oo-PAELY0x7yQBL37e75kjTHVPCgsYipskUDyVvKLrHzxNz5HsImXNmuQZPt5LAkp5SRV1TA2c9jVz040 "Proxy 패턴(김동석)")
+![Proxy 패턴(김동석)](https://www.plantuml.com/plantuml/png/bP71IiD048RFxbCC1MbxQ78l8ZruwALGr1VOPAVDQZORTYR1e892RWhYKL3F7XMy-4erVGUt1Ymj23gduPzlvfzXHiJISM5Ic3fxLi7ozcLPl_SM7rUVTmzD_TGN8j4A0KtE5HWq4JhQb3YnYeHWpId-EYL1gT11mfpJC0pdcfCY2c9hmYWjKD6fDk69BEK1afvdKycCBYCnizOdq3pVD_LRS_EuUBs6NIKPUvtAHp2P14freJiU3utf-6M5pdp3JCO8XqYsS3uv5pjv4QKwXYDsEfj3xcoCHBs-k1GYJYKHZ56MrRywsal_J1uZyOekhLOhg5LQxCTtxo88DbVPgdsF4gtrO7yB5MkZWI-kzH5coh_u2m00 "Proxy 패턴(김동석)")
 
 ## 소스
 1. Proxy : Subject를 대체하고자 하는 객체
@@ -35,5 +35,6 @@
 ## 참고
 
 * [wikipedia : Proxy pattern](https://en.wikipedia.org/wiki/Proxy_pattern)
-* [refactoring.guru : Design Patterns / Behavioral Patterns / Proxy](https://refactoring.guru/design-patterns/proxy)
-* [tutorialspoint : Design Patterns - Proxy Pattern](https://www.tutorialspoint.com/design_pattern/state_pattern.htm)
+* [refactoring.guru : Design Patterns / Structural Patterns / Proxy](https://refactoring.guru/design-patterns/proxy)
+* [tutorialspoint : Design Patterns - Proxy Pattern](https://www.tutorialspoint.com/design_pattern/proxy_pattern.htm)
+* [baeldung : The Proxy Pattern in Java](https://www.baeldung.com/java-proxy-pattern)
