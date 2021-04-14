@@ -7,11 +7,9 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class HeavyResource implements Resource {
-	public HeavyResource() throws InterruptedException {
+	public HeavyResource() {
 		super();
 		log.info("HeavyResource 초기화 중...");
-		// 초기화에 많은 시간이 걸린다고 가정함
-		Thread.sleep(2000);
 		log.info("HeavyResource 초기화 완료");
 	}
 
