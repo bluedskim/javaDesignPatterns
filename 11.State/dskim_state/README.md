@@ -4,7 +4,7 @@
 
 ![State](https://refactoring.guru/images/patterns/content/state/state-en-2x.png?id=dfd427a938223ae88029 "State")
 
-"상태State 패턴은 어떤 객체의 상태에 따라 행위가 변경되는 경우 사용한다."
+"어떤 객체의 상태에 따라 행위가 변경되는 경우 유용한 패턴"
 (출처:https://refactoring.guru/design-patterns/state)
 
 ## 특징/용도
