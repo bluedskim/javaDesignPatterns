@@ -1,5 +1,8 @@
 package net.dskim.desingpattern.state.solution;
 
+/**
+ * 주문 객체
+ */
 public class Package {
 	private PackageState currentState = new OrderedState();
 
