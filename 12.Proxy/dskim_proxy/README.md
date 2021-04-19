@@ -4,7 +4,7 @@
 
 ![Proxy](https://refactoring.guru/images/patterns/content/proxy/proxy-2x.png?id=fb3d14e21c210a758d47 "Proxy")
 
-"특정 클래스 대신 그 클래스와 동일한 인터페이스를 구현한 래퍼 _wrapper_ 클래스 _Proxy_ 를 이용한다"
+"특정 클래스 대신 그 클래스와 동일한 인터페이스를 구현한 래퍼 _wrapper_ 클래스 _Proxy_ 를 이용한다" (출처:https://refactoring.guru/design-patterns/proxy)
 
 ## 특징/용도
 1. proxy클래스는 client의 요청을 subject에 단순히 전달하는 목적으로 사용하거나 subject의 메소드를 호출하기 이전, 이후에 특정 로직을 추가고자 할 때 사용한다.
@@ -29,8 +29,8 @@
 ![Proxy 패턴(김동석)](https://www.plantuml.com/plantuml/png/bP71IiD048RFxbCC1MbxQ78l8ZruwALGr1VOPAVDQZORTYR1e892RWhYKL3F7XMy-4erVGUt1Ymj23gduPzlvfzXHiJISM5Ic3fxLi7ozcLPl_SM7rUVTmzD_TGN8j4A0KtE5HWq4JhQb3YnYeHWpId-EYL1gT11mfpJC0pdcfCY2c9hmYWjKD6fDk69BEK1afvdKycCBYCnizOdq3pVD_LRS_EuUBs6NIKPUvtAHp2P14freJiU3utf-6M5pdp3JCO8XqYsS3uv5pjv4QKwXYDsEfj3xcoCHBs-k1GYJYKHZ56MrRywsal_J1uZyOekhLOhg5LQxCTtxo88DbVPgdsF4gtrO7yB5MkZWI-kzH5coh_u2m00 "Proxy 패턴(김동석)")
 
 ## 소스
-1. Proxy : Subject를 대체하고자 하는 객체
-1. Subject : 숨기고자 하는 객체
+1. Proxy : Subject를 대체하고자 하는 객체(Proxy.java)
+1. Subject : 숨기고자 하는 객체(HeavyResource.java)
 
 ## 참고
 
