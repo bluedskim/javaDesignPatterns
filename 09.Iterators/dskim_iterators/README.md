@@ -23,7 +23,11 @@
 ![Iterator 패턴(김동석)](https://www.plantuml.com/plantuml/png/ZPAnIWD148Rhx5CC0J4fSh7M61GDn29gOISMUxUJtEhjRhYT4uCA2kaKn59GQqi56ryfdk_WdcSk5q5ngzcP_V_vPjWrIpocH4MmHHXpCZ5yN3zzZ5zhaxUBzvkxTFnGPooK0W7La4QWKFaOs_aKXKPOnaXIX7yPXSW5nX0I3UroipcG52Q-5nZLzAC4XJsIgdd8Z_acMZdGkvoSbRQiRumB87syJSSlwTNzvFaI5WGdh5L7xdYzdYV48YnskyjALHqlaze9-ZoOqRGwRJXbbM7YHp80tvW8kOQGssqyeLfzfIXrGEUP2ZjdB8YujR0UntnKpFKlcnt_40EQUh5AVjy_09vvkOH31Aa5di0gBAralNv0-n6szihGtBSKSsUQhSXBI4PUCPrxAB_ZhDqy-ORHnAN6CdgXpC7Ayfbw-cWFBMNQOoD5Fa2vaYkcpD0wQpH-z6N5xcR5QOgnkIwDHhiO_vVAbsWDjN3VzXC0 "Iterator 패턴(김동석)")
 
 ## 소스
-1. target : ArrayIterator.java, ArrayContainer.java
+1. target : 
+    * MyIterable.java : 컨테이너가 구현해야하는 인터페이스
+    * ArrayContainer.java : 배열을 가지고 있는 객체
+    * ArrayIterator.java : 배열학목을 순서대로 접근하기 위한 iterator
+    * ReverseArrayIterator.java : 배열학목을 역순으로 접근하기 위한 iterator
 1. client : IteratorTest.java
 
 ## 참고
