@@ -7,9 +7,12 @@
 "하나의 집합Collection의 모든 요소를 모두 접근하는 방법은 여러가지가 있을 수 있다"
 (출처:https://refactoring.guru/design-patterns/iterator)
 
+## 해결하려는 문제
+1. 집합collection의 각각 항목 모두를 접근할 수 있는 일관된 방법을 제공. 
+
 ## 특징/용도
 1. behavioral design patterns의 하나
-1. 집합collection의 각각 항목 모두를 접근할 수 있는 일관된 방법을 제공하는데 목적이 있다. 이 방법은 그 집합의 실제 구현과는 무관하다(Information Hiding, Separation of concerns).
+1. iterator는 해당 집합의 실제 구현과는 무관하다(Information Hiding, Separation of concerns).
 
 ## 고려사항
 
