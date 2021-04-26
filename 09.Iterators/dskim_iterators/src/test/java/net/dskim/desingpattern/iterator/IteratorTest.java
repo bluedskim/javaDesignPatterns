@@ -8,6 +8,9 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class IteratorTest {
 
 	/**
@@ -38,12 +41,19 @@ public class IteratorTest {
 			,"Racheal"
 			,"Kim"
 		};
-
-		Iterable<Object> arrayContainer = new ArrayContainer(names);
-		Iterator<Object> arrayIterator = arrayContainer.iterator();
 		int i = 0;
+
+		MyIterable arrayContainer = new ArrayContainer(names);
+		Iterator<Object> arrayIterator = arrayContainer.iterator();
 		while (arrayIterator.hasNext()) {
 			assertEquals(names[i++], arrayIterator.next());
+		}
+
+		i = 0;
+		Iterator<Object> reverseArrayIterator = arrayContainer.reverseIterator();
+		while (reverseArrayIterator.hasNext()) {
+			//log.info("reverseArrayIterator.next()={}", reverseArrayIterator.next());
+			assertEquals(names[names.length - (++i) ], reverseArrayIterator.next());
 		}
 	}	
 }
