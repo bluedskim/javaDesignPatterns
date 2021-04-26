@@ -19,15 +19,12 @@ public class ArrayIterator implements Iterator<Object>{
 
 	@Override
 	public boolean hasNext() {
-		boolean hasNext = index <= array.length - 1;
-		//log.info("index={} hasNext={}", index, hasNext);
-		return hasNext;
+		return index <= array.length - 1;
 	}
 
 	@Override
 	public Object next() {
 		if(!hasNext()) throw new NoSuchElementException();
-		//log.info("index={} returning={}", index, array[index]);
 		return array[index++];
 	}
 }

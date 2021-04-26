@@ -14,9 +14,7 @@ public class ReverseArrayIterator implements Iterator<Object>{
 	int nextIndex = 0;
 
 	public ReverseArrayIterator(Object[] originalArray) {
-		//log.info("originalArray.length={}", originalArray.length);
 		reverseArray = new Object[originalArray.length];
-		//log.info("reverseArray.length={}", reverseArray.length);
 		for(int reverseArrayIndex = 0 ; reverseArrayIndex < reverseArray.length ; reverseArrayIndex++){
 			reverseArray[reverseArrayIndex] = originalArray[originalArray.length - 1 - reverseArrayIndex];
 		}
@@ -24,15 +22,12 @@ public class ReverseArrayIterator implements Iterator<Object>{
 
 	@Override
 	public boolean hasNext() {
-		boolean hasNext = nextIndex <= reverseArray.length - 1;
-		//log.info("nextIndex={} hasNext={}", nextIndex, hasNext);
-		return hasNext;
+		return nextIndex <= reverseArray.length - 1;
 	}
 
 	@Override
 	public Object next() {
 		if(!hasNext()) throw new NoSuchElementException();
-		//log.info("nextIndex={} returning={}", nextIndex, reverseArray[nextIndex]);
 		return reverseArray[nextIndex++];
 	}
 }

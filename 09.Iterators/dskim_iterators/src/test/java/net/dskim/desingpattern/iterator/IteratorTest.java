@@ -41,9 +41,10 @@ public class IteratorTest {
 			,"Racheal"
 			,"Kim"
 		};
-		int i = 0;
-
+		
 		MyIterable arrayContainer = new ArrayContainer(names);
+
+		int i = 0;
 		Iterator<Object> arrayIterator = arrayContainer.iterator();
 		while (arrayIterator.hasNext()) {
 			assertEquals(names[i++], arrayIterator.next());
@@ -52,8 +53,7 @@ public class IteratorTest {
 		i = 0;
 		Iterator<Object> reverseArrayIterator = arrayContainer.reverseIterator();
 		while (reverseArrayIterator.hasNext()) {
-			//log.info("reverseArrayIterator.next()={}", reverseArrayIterator.next());
-			assertEquals(names[names.length - (++i) ], reverseArrayIterator.next());
+			assertEquals(names[names.length - (++i)], reverseArrayIterator.next());
 		}
 	}	
 }
