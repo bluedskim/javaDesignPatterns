@@ -6,15 +6,14 @@
 
 "특정 클래스 대신 그 클래스와 동일한 인터페이스를 구현한 래퍼 _wrapper_ 클래스 _Proxy_ 를 이용한다" (출처:https://refactoring.guru/design-patterns/proxy)
 
-## 특징/용도
-1. proxy클래스는 client의 요청을 subject에 단순히 전달하는 목적으로 사용하거나 subject의 메소드를 호출하기 이전, 이후에 특정 로직을 추가고자 할 때 사용한다.
-1. client입장에서는 proxy를 사용하든 subject를 사용하든 기능상 차이는 없다(black box).
-1. 지연된 초기화 Lazy initialization (virtual proxy) : 클래스 생성시 초기화 하는 것이 아니라 해당 객체의 메소드를 호출 할 때 초기화 하도록 함 
-
 ## 해결하려는 문제
 
 1. 특정 객체에 대한 접근을 통제할 수 있는 일관된 방법이 필요할 때(보안, 권한 체크).
 1. 네트워크 접속, 메모리에 탑재된 대형 객체, 파일, 그 외 생성에 큰 비용이 발생하거나 복제가 불가능한 리소스들 등에 대한 캐시가 필요할 때.
+## 특징/용도
+1. proxy클래스는 client의 요청을 subject에 단순히 전달하는 목적으로 사용하거나 subject의 메소드를 호출하기 이전, 이후에 특정 로직을 추가고자 할 때 사용한다.
+1. client입장에서는 proxy를 사용하든 subject를 사용하든 기능상 차이는 없다(black box).
+1. 지연된 초기화 Lazy initialization (virtual proxy) : 클래스 생성시 초기화 하는 것이 아니라 해당 객체의 메소드를 호출 할 때 초기화 하도록 함 
 
 ## 고려사항
 
