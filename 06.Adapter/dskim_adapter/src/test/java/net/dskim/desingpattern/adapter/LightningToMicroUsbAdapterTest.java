@@ -8,7 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LightningToMicroUsbAdapterTest {
-	// MicroUsbPhone 충전전용 메소드
+	// MicroUsbPhone 충전전용 메소드를 반드시 써야 한다고 가정한다.
 	public String rechargeMicroUsbPhone(MicroUsbPhone microUsbPhone) {
 		microUsbPhone.useMicroUsb();
 		return microUsbPhone.recharge();
