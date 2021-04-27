@@ -4,13 +4,16 @@
 
 ![숲속의 곰이 북극에 적응하기](https://static.spacecrafted.com/b849f747e16744a5be3537c67cbb5770/i/f4d8c0d7559a4f02861ae4d67e55ceb2/1/GCuCv726gZycFxatRCb7iU/Adaptation.jpg "숲속의 곰이 북극에 적응하기")
 (출처:https://educationinaction.org/water-rocks-vocabulary/adaptation)
-## 용도/목적
-1. 어떤 인터페이스를 다른 목적의 인터페이스로 만드는 패턴.
+
+## 해결하려는 문제
 1. 인터페이스의 불일치 해결.
+## 용도/목적
+1. 구조적Structural 패턴
+1. 어떤 인터페이스를 다른 목적의 인터페이스로 만드는 패턴.
 1. 클라이언트 소스 수정이 불가능한 경우 유용하다.
 
 ## 구성요소
-1. adapter : adaptee의 interface를 클라이언트가 원하는 target의 인터페이스로 변경하는 객체
+1. adapter(wrapper) : adaptee의 interface를 클라이언트가 원하는 target의 인터페이스로 변경하는 객체
 1. adaptee : 변경대상이 되는 객체
 1. target : 클라이언트가 원하는 인터페이스를 가지고 있는 객체
 1. 클라이언트 : target으로 변경된 adaptee를 사용하는 객체
@@ -34,5 +37,6 @@
 
 ## 참고
 
+* [refactoring.guru : Adapter pattern](https://refactoring.guru/design-patterns/adapter)
 * [wikipedia : Adapter pattern](https://en.wikipedia.org/wiki/Adapter_pattern)
 * [baeldung : The Adapter Pattern in Java](https://www.baeldung.com/java-adapter-pattern#:~:text=An%20Adapter%20pattern%20acts%20as,compatible%20with%20the%20client's%20interface.)
