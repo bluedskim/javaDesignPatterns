@@ -1,10 +1,13 @@
-# Tempate Method 패턴(김동석)
+# Template Method 패턴(김동석)
 
 ## 패턴 다이어그램
 
 ![Design patterns: Template Method](https://steemitimages.com/DQmRbBeqNZykcGGhvat7hHyfZhqFu3ypgGm19L6FkuvbFCG/templatemethod.png "Design patterns: Template Method")
 
 (출처:https://steemit.com/design-patterns/@slawas/design-patterns-template-method)
+
+## 해결하려는 문제
+1. 처리 알고리즘의 뼈대skeleton는 동일하고 단계step의 상세만 다른 경우 중복을 어떻게 없앨 수 있을까
 
 ## 특징/용도
 1. behavioral design patterns의 일종
@@ -14,7 +17,7 @@
 ## 고려사항
 
 1. 자식 객체들은 템플리트 메소드 자체를 override하면 안된다.
-1. 부모 추상 객체를 사용하는 대신 인터페이스로 만들 수도 있다. 하지만 이 경우 모든 메소드는 public 으로 접근가능하므로 주의가 필요 
+1. 추상 객체를 부모로 사용하는 대신 인터페이스로 만들 수도 있다. 하지만 이 경우 모든 메소드는 public 으로 접근가능하므로 주의가 필요 
 
 ## 클래스 다이어그램
 
@@ -27,6 +30,7 @@
 
 ## 참고
 
+* [refactoring : Template Method](https://refactoring.guru/design-patterns/template-method)
 * [wikipedia : Template method pattern](https://en.wikipedia.org/wiki/Template_method_pattern)
 * [baeldung : Implementing the Template Method Pattern in Java](https://www.baeldung.com/java-template-method-pattern)
 * [tutorialspoint : Design Patterns - Template Pattern](https://www.tutorialspoint.com/design_pattern/template_pattern.htm)
