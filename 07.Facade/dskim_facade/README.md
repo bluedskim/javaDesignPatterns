@@ -5,9 +5,15 @@
 ![Facade Design Pattern | Introduction](https://media.geeksforgeeks.org/wp-content/uploads/facadeA.png "Facade Design Pattern | Introduction")
 
 (출처:https://www.geeksforgeeks.org/facade-design-pattern-introduction/)
-## 용도/목적
-1. 복잡한 구현을 클라이언트와 분리
-1. 클라이언트의 의존성을 하나로 줄이기 위함
+
+## 해결하려는 문제
+1. 클라이언트에서 다른 객체들로의 참조들을 분리하여 클라이언트의 의존성을 줄이고 복잡성을 관리.
+
+## 특징/용도
+1. 구조적structural 디자인 패턴
+1. 클라이언트에 Facade라는 단순화 된, 필요한 기능만 접근할 수 있는 레이어를 추가
+1. 서드파티 라이브러리에 대한 직접적 의존성을 제거하여 교체를 쉽게 한다.
+1. facade는 캡슐화된encapsulated 블랙박스.
 
 ## 구성요소
 1. facade : target의 여러 인터페이스를 조합한 루틴이 정의된 객체
@@ -15,7 +21,7 @@
 1. client : facade를 통해 target들을 사용(호출)하는 객체
 ## 고려사항
 
-다른 유사한 패턴과 비교해보자
+다른 유사한 패턴을 사용할 수도 있다.
 
 1. Decorator : 원래의 소스를 감싸는 방식으로 인터페이스에 동적으로 기능을 추가한다.
 1. Delegation : 상속을 통한 조합
