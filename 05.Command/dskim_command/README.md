@@ -1,9 +1,18 @@
 # Command 패턴(김동석)
+
+![Command Pattern : Real-World Analogy](https://refactoring.guru/images/patterns/content/command/command-comic-1-2x.png?id=47b3c00b2cfbda7157a1 "Command Pattern : Real-World Analogy")
+(출처:https://refactoring.guru/design-patterns/command)
+
+## 해결하려는 문제
+1. view(presentation)과 비즈니스 로직의 직접 연관을 제거
+1. 런타임에 행위를 변경
+
 ## 용도/목적
 1. 조건문이 많은 복잡한 로직을 간단하게
 1. invoker와 receiver 사이에 command를 두어 직접 연관을 제거하여 새로운 command가 추가되더라도 invoker를 수정할 필요가 없음
 
 ## 특징
+1. 행위behavioral 패턴
 1. 눈에 보이지 않는 무형의 개념(행위)도 객체화 할 수 있다.
 
 ## 고려사항
