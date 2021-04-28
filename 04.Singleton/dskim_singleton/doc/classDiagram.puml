@@ -1,36 +1,21 @@
-@startuml Factory Method 패턴(김동석)
+@startuml Singleton 패턴(김동석)
 
 hide empty members
 hide empty methods
 
-title Factory Method 패턴(김동석)
+title Singleton 패턴(김동석)
 header https://github.com/bluedskim/javaDesignPatterns
 footer 작성시각 %date("yyyy.MM.dd' 'HH:mm")
 
-interface Shape {
-	String draw()
+class Coin {
+	private int coinCount
+	private static Coin instance
+	private Coin()
+	public static Coin getInstance()
+	public int getCoinCount()
+	public void addMoreCoin()
+	public void deductCoin()
 }
 
-class Circle {
-	String draw()
-}
-
-class Rectangle {
-	String draw()
-}
-
-class Square {
-	String draw()
-}
-
-class ShapeFactory {
-	Shape getShape(String shapeType)
-}
-
-Shape <|-- Circle
-Shape <|-- Rectangle
-Shape <|-- Square
-
-FactoryMethodTest --> ShapeFactory : getShape(도형형태)
-ShapeFactory --> Shape : 해당 도형 생성자 호출
+SingletonTest --> Coin : getInstance()
 @enduml

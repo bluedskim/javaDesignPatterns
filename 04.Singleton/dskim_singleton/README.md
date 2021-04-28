@@ -1,4 +1,10 @@
-# Factory 패턴(김동석)
+# Singleton 패턴(김동석)
+
+![singleton 일러스트](https://refactoring.guru/images/patterns/content/singleton/singleton-comic-1-en-2x.png?id=05678e879d13f7f6a377 "singleton 일러스트")
+
+## 해결하려는 문제
+1. 공유된 자원은 대체로 한정적이다. 이 자원을 무분별하게 사용하는 경우 쉽게 고갈될 수 있다. 
+
 ## 용도
 1. 어플리케이션을 통틀어 한 개의 인스턴스만 필요할 때
 1. 그 한 개의 인스턴스를 쉽게 접근하고자 할 때
@@ -10,21 +16,23 @@
 
 ## 고려사항
 1. 객체지향 설계원칙에 위배
-  * singleton 클래스는 상속 불가
+    * singleton 클래스는 상속 불가
 1. "No control over creation"
 1. dependency injection 불가
+1. spring bean은 기본적으로 singleton으로 동작한다(https://www.baeldung.com/spring-bean-scopes)
 
 ## 클래스 다이어그램
-![Factory Method 패턴(김동석)](https://www.plantuml.com/plantuml/png/XPBFIm915CVFpL_n4CBre7kN2A48BqAa_y2uyzpTsb_Dl2sM2WhtPc0T10FrtB508lybtVqVsbKplTWmXpTVFjzvN-PDJH6N5BeEd763V1b10ydo1QJFxsayrUQpnqN_BOd79SOiMo2W6r04Bhfjb6fNodsACRB9mV-liv0Bb60H1QggwwPDLjYk6BwhjvqGXRgoNVsIt_1JLBRfdNCYb9vY7T_F2aWchqdycVH6yuydE1ISK2j4sQeq6XKXYb2irwkkMyXIsrx6TxY1qBHuW7373feaRSy48VcjLc8FZ1aELmfER6au-u0BD8XxvbwcUHrokHV8K_o-JeujKvb8oq9RkrH-Q4K1BfqhvkY-N5w7t5OsgRR5LGp6rerMKsYX8YYNZtSpLF-QB_fnEXpakpigiHrgOyluT31Tz6QmeY7fZlDHJ5uW7NudNoDMGqzaF-e7 "Factory Method 패턴(김동석)")
+Singleton 패턴(김동석)
+
+![Singleton 패턴(김동석)](https://www.plantuml.com/plantuml/png/VP71IiD048RFxbCC1MbwQ7FFGGhnK0y1GLzWancJrUnkoKuAHGI5tXJ4ew2UFIfuyPNQz1tSscfZ3yvfvly_vbzcXuvbnRKkuKIPl2Is1fPthylPHp3_l5xSFpQpvvuGXK82qcEUWYQTKkN-IbnOT4AmufB-tLIGHAgWO1wxA0npnKMT3ZAhmxIi2Ts5qk6vdCX3SYetnvAPAkF4cRM-WURbePczDxTFyxSRs4V957IclWP9Ca3iGdSqYhJk-0TdfNGEOgiCN8gzSQKc7WPb63AlnROsl9Nz3LXbQrePFvcCjkvA3df-hjFIKsqu9pxQy2rYbUAT-2UePKsiGf28YQreP--tXOHrnXldIeZVKvwIO-Zt3zQvqKxoa0pwF_m2 "Singleton 패턴(김동석)")
+
+
 
 ## 소스
-* Shape.java : 도형(인터페이스)
-* 도형 객체들 : Shape.java 를 implement
-  * Rectangle.java : 사각형
-  * Circle.java : 원
-  * Square.java : 정사각형
-* ShapeFactory.java : 도형 팩토리
+* 싱글톤 클래스 : Coin.java
+* 클라이언트 : SingletonTest.java
 
 ## 참고
 
+* [refactoring.guru : Singleton pattern](https://refactoring.guru/design-patterns/singleton)
 * [wikipedia : Singleton pattern](https://en.wikipedia.org/wiki/Singleton_pattern#Java_Implementation_[7])
