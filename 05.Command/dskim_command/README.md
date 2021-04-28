@@ -4,8 +4,7 @@
 (출처:https://refactoring.guru/design-patterns/command)
 
 ## 해결하려는 문제
-1. view(presentation)과 비즈니스 로직의 직접 연관을 제거
-1. 런타임에 행위를 변경
+1. view(presentation)과 비즈니스 로직의 직접 연관을 제거(행위가 소스에 하드코딩되어 있다면 런타임에 추가/변경이 불가능)
 
 ## 용도/목적
 1. 조건문이 많은 복잡한 로직을 간단하게
@@ -16,7 +15,7 @@
 1. 눈에 보이지 않는 무형의 개념(행위)도 객체화 할 수 있다.
 
 ## 고려사항
-1. command용 interface(TextFileOperation.java)는 @FunctionalInterface로 하는 것이 좋다.
+1. command용 interface(TextFileOperation.java)는 @FunctionalInterface로 할 수 있다.
 
 ## 클래스 다이어그램
 
