@@ -1,4 +1,10 @@
-# Factory 패턴(김동석)
+# Factory Method 패턴(김동석)
+
+![Factory design Pattern in Java – with examples](https://dotnettutorials.net/wp-content/uploads/2018/11/word-image-103.png "Factory design Pattern in Java – with examples")
+(출처:https://dotnettutorials.net/lesson/abstract-factory-design-pattern-csharp/)
+## 해결하려는 문제
+1. 생성자를 직접 호출해서 객체를 생성하는 경우 해당 객체와 클라이언트가 강하게 결합되게 되어 확정성이 떨어진다.
+
 ## 개요
 * 생성자를 호출하지 않고 생성하기 위한 패턴(생성될 클래스를 지정하지 않는다)
 * 해당 클래스를 사용하는 클래스에 하드코딩을 없앨 수 있다.
@@ -11,10 +17,11 @@
   * Rectangle.java : 사각형
   * Circle.java : 원
   * Square.java : 정사각형
-* ShapeFactory.java : 도형 팩토리
+* ShapeFactory.java : 도형 팩토리(Virtual Constructor)
 
 ## 참고
 
+* [refactoring.guru : Factory Method](https://refactoring.guru/design-patterns/factory-method)
 * [tutorialspoint : Design Pattern - Factory Pattern](https://www.tutorialspoint.com/design_pattern/factory_pattern.htm)
 * [wikipedia : Factory method pattern](https://en.wikipedia.org/wiki/Factory_method_pattern#Java)
 * [baeldung : Introduction to Creational Design Patterns](https://www.tutorialspoint.com/design_pattern/factory_pattern.htm)
