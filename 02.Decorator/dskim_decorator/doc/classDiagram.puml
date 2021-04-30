@@ -48,7 +48,7 @@ BeverageBase <|-- BlackTea
 BeverageBase <|-- Espresso
 BeverageBase <|-- GreenTea
 BeverageBase <|-- CondimentsDecoratorBase
-BeverageBase <.. CondimentsDecoratorBase
+BeverageBase <-- CondimentsDecoratorBase
 
 CondimentsDecoratorBase <|-- ChocolateCondiment
 CondimentsDecoratorBase <|-- MilkCondiment
