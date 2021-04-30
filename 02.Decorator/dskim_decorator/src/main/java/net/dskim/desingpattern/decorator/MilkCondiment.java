@@ -2,7 +2,7 @@ package net.dskim.desingpattern.decorator;
 
 class MilkCondiment extends CondimentsDecoratorBase {
 	public MilkCondiment(BeverageBase beverage) {
-		this.beverage = beverage;
+		super(beverage);
 		description = this.beverage.getDescription() + " + Milk";
 	}
 
