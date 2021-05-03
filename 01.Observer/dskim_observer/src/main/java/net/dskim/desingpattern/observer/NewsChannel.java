@@ -3,20 +3,19 @@ package net.dskim.desingpattern.observer;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
+/**
+ * Listener(Subscriber)
+ */
 public class NewsChannel implements PropertyChangeListener {
 
-	private String theMostRecentNews;
+	private String news;
 
 	@Override
 	public void propertyChange(PropertyChangeEvent evt) {
-		this.setNews((String) evt.getNewValue());
+		news = (String) evt.getNewValue();
 	}
 
 	public String getNews() {
-		return theMostRecentNews;
-	}
-
-	public void setNews(String news) {
-		this.theMostRecentNews = news;
+		return news;
 	}
 }
