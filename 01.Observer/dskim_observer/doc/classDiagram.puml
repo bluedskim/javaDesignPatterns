@@ -17,14 +17,15 @@ class NewsAgency {
 }
 
 class NewsChannel {
-    String theMostRecentNews
+    String news
     void propertyChange(PropertyChangeEvent evt)
     String getNews()
-    void setNews(String news)
 }
 
-NewsAgency ..> PropertyChangeSupport
-NewsChannel ..|> PropertyChangeListener
+PropertyChangeSupport <-- NewsAgency
+PropertyChangeListener <-- NewsAgency
+PropertyChangeListener <|.. NewsChannel
+PropertyChangeEvent <-- NewsChannel
 PropertyChangeSupport o- PropertyChangeListener
 
 @enduml
