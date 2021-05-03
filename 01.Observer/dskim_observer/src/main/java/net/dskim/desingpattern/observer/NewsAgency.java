@@ -3,8 +3,11 @@ package net.dskim.desingpattern.observer;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 
+/**
+ * Subject(Publisher)
+ */
 public class NewsAgency {
-	private String news;
+	private String previousNews;
 
 	private PropertyChangeSupport support;
 
@@ -21,8 +24,8 @@ public class NewsAgency {
 	}
 
 	public void setNews(String news) {
-		support.firePropertyChange("news", this.news, news);
-		this.news = news;
+		support.firePropertyChange("news", this.previousNews, news);
+		this.previousNews = news;
 
 	}
 }
