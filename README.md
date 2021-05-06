@@ -39,7 +39,7 @@
 ## 스탭
 
 * 운영자 : 김동석 https://github.com/bluedskim 문의 : bluedskim@gmail.com
-* 부 운영자 : 모집 중입니다.
+* 부 운영자 : 모집 중입니다. [이메일로](mailto:bluedskim@gmail.com) 연락 부탁드립니다.
 
 # 공부할 디자인 패턴 목차
 
