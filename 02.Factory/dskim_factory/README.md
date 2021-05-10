@@ -1,7 +1,8 @@
 # Factory Method 패턴(김동석)
 
 ![Factory design Pattern in Java – with examples](https://dotnettutorials.net/wp-content/uploads/2018/11/word-image-103.png "Factory design Pattern in Java – with examples")
-(출처:https://dotnettutorials.net/lesson/abstract-factory-design-pattern-csharp/)
+
+(출처:[Abstract Factory Design Pattern in C#](https://dotnettutorials.net/lesson/abstract-factory-design-pattern-csharp/))
 ## 해결하려는 문제
 1. 생성자를 직접 호출해서 객체를 생성하는 경우 해당 객체와 클라이언트가 강하게 결합되게 되어 확정성이 떨어진다.
 
