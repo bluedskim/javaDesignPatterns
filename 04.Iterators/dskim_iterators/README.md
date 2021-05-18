@@ -5,7 +5,7 @@
 ![Iterators implement various traversal algorithms. Several iterator objects can traverse the same collection at the same time.](https://refactoring.guru/images/patterns/diagrams/iterator/solution1-2x.png "Iterators implement various traversal algorithms. Several iterator objects can traverse the same collection at the same time.")
 
 "하나의 집합Collection의 모든 요소를 모두 접근하는 방법은 여러가지가 있을 수 있다"
-(출처:https://refactoring.guru/design-patterns/iterator)
+([출처:https://refactoring.guru/design-patterns/iterator](https://refactoring.guru/design-patterns/iterator))
 
 ## 해결하려는 문제
 1. 집합collection의 각각 항목 모두를 접근할 수 있는 일관된 방법을 제공. 

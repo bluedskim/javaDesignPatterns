@@ -4,7 +4,7 @@
 
 ![Proxy](https://refactoring.guru/images/patterns/content/proxy/proxy-2x.png?id=fb3d14e21c210a758d47 "Proxy")
 
-"특정 클래스 대신 그 클래스와 동일한 인터페이스를 구현한 래퍼 _wrapper_ 클래스 _Proxy_ 를 이용한다" (출처:https://refactoring.guru/design-patterns/proxy)
+"특정 클래스 대신 그 클래스와 동일한 인터페이스를 구현한 래퍼 _wrapper_ 클래스 _Proxy_ 를 이용한다" ([출처:https://refactoring.guru/design-patterns/proxy](https://refactoring.guru/design-patterns/proxy))
 
 ## 해결하려는 문제
 
@@ -30,6 +30,7 @@
 ## 소스
 1. Proxy : Subject를 대체하고자 하는 객체(Proxy.java)
 1. Subject : 숨기고자 하는 객체(HeavyResource.java)
+1. Resource : proxy와 subject가 구현해야 하는 인터페이스(Resource.java)
 
 ## 참고
 
