@@ -23,5 +23,4 @@ public class ArrayContainer implements MyIterable {
 	public Iterator<Object> reverseIterator() {
 		return reverseArrayIterator;
 	}
-
 }

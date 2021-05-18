@@ -3,12 +3,9 @@ package net.dskim.desingpattern.iterator;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-import lombok.extern.slf4j.Slf4j;
-
 /***
  * 배열 index가 높은 항목에서 낮은 항목으로 탐색하는 iterator
  */
-@Slf4j
 public class ReverseArrayIterator implements Iterator<Object>{
 	Object[] reverseArray;
 	int nextIndex = 0;
