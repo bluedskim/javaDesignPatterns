@@ -5,7 +5,7 @@
 ![State](https://refactoring.guru/images/patterns/content/state/state-en-2x.png?id=dfd427a938223ae88029 "State")
 
 "어떤 객체의 상태에 따라 행위가 변경되는 경우 유용한 패턴"
-(출처:https://refactoring.guru/design-patterns/state)
+(출처:[https://refactoring.guru/design-patterns/state](https://refactoring.guru/design-patterns/state))
 
 ## 해결하려는 문제
 

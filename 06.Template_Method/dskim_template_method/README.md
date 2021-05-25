@@ -4,7 +4,7 @@
 
 ![Design patterns: Template Method](https://steemitimages.com/DQmRbBeqNZykcGGhvat7hHyfZhqFu3ypgGm19L6FkuvbFCG/templatemethod.png "Design patterns: Template Method")
 
-(출처:https://steemit.com/design-patterns/@slawas/design-patterns-template-method)
+([출처:https://steemit.com/design-patterns/@slawas/design-patterns-template-method](https://steemit.com/design-patterns/@slawas/design-patterns-template-method))
 
 ## 해결하려는 문제
 1. 처리 알고리즘의 뼈대skeleton는 동일하고 단계step의 상세만 다른 경우 중복을 어떻게 없앨 수 있을까
