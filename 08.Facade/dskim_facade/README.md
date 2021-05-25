@@ -4,7 +4,7 @@
 
 ![Facade Design Pattern | Introduction](https://media.geeksforgeeks.org/wp-content/uploads/facadeA.png "Facade Design Pattern | Introduction")
 
-(출처:https://www.geeksforgeeks.org/facade-design-pattern-introduction/)
+(출처:[https://www.geeksforgeeks.org/facade-design-pattern-introduction/](https://www.geeksforgeeks.org/facade-design-pattern-introduction/))
 
 ## 해결하려는 문제
 1. 클라이언트에서 다른 객체들로의 참조들을 분리하여 클라이언트의 의존성을 줄이고 복잡성을 관리.
