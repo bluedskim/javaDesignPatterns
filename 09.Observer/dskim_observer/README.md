@@ -1,6 +1,7 @@
 # Observer 패턴(김동석)
 ![Design Pattern: The Observer Pattern](https://dev-to-uploads.s3.amazonaws.com/i/0umqa0oz6wf95h6aza4j.jpeg "Design Pattern: The Observer Pattern")
-(출처:https://dev.to/danlee0528/design-pattern-the-observer-pattern-3oha)
+(출처:[https://dev.to/danlee0528/design-pattern-the-observer-pattern-3oha](https://dev.to/danlee0528/design-pattern-the-observer-pattern-3oha))
+
 ## 해결하려는 문제 : 알림의 주체는 누구인가?
 
 * push vs poll
