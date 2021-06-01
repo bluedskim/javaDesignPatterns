@@ -3,7 +3,8 @@
 ## Adaptation 적응
 
 ![숲속의 곰이 북극에 적응하기](https://static.spacecrafted.com/b849f747e16744a5be3537c67cbb5770/i/f4d8c0d7559a4f02861ae4d67e55ceb2/1/GCuCv726gZycFxatRCb7iU/Adaptation.jpg "숲속의 곰이 북극에 적응하기")
-(출처:https://educationinaction.org/water-rocks-vocabulary/adaptation)
+
+(출처:[https://educationinaction.org/water-rocks-vocabulary/adaptation](https://educationinaction.org/water-rocks-vocabulary/adaptation))
 
 ## 해결하려는 문제
 1. 인터페이스의 불일치 해결.
