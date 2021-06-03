@@ -2,6 +2,8 @@
 
 ![IEC 61131-3: The Decorator Pattern](https://stefanhenneken.files.wordpress.com/2019/02/picture03.png "IEC 61131-3: The Decorator Pattern")
 
+(출처:[https://stefanhenneken.net/2019/02/16/iec-61131-3-the-decorator-pattern](https://stefanhenneken.net/2019/02/16/iec-61131-3-the-decorator-pattern))
+
 ## 해결하려는 문제
 ## 특징/용도
 1. 런타임에 객체에 동적으로 기능을 추가하기 위한 structural 패턴
@@ -28,6 +30,5 @@
 ## 참고
 
 * [baeldung : The Decorator Pattern in Java](https://www.baeldung.com/java-decorator-pattern)
-
 * [DZone : Decorator Design Pattern in Java](https://dzone.com/articles/decorator-design-pattern-in-java)
 
