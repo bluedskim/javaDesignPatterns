@@ -1,6 +1,6 @@
 package net.dskim.desingpattern.singleton;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
@@ -14,7 +14,8 @@ public class SingletonTest {
 		Coin coin2 = Coin.getInstance();
 
 		log.info("coin1={}, coin2={}", coin1, coin2);
-		assertEquals(coin1, coin2);
+		assertEquals(coin1, coin2);	//assertTrue(coin1.equals(coin2));
+		assertSame(coin1, coin2);
 
 		coin1.addMoreCoin();
 		
