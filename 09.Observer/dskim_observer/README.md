@@ -14,7 +14,7 @@
 
 1. publisher-subscriber(pub-sub)이라고도 한다.
 1. 객체들은 one(publisher)-to-many(subscriber) 관계를 가진다.
-1. subscriber는 publisher알지만 publisher는 subscriber를 알지 못한다. 즉 관계는 단방향이다.
+1. subscriber는 publisher를 알지만 publisher는 subscriber를 알지 못한다. 즉 관계는 단방향이다.
 
 ## 고려사항
 
