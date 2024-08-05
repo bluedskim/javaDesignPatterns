@@ -27,7 +27,7 @@
     * MyIterable.java : 컨테이너가 구현해야하는 인터페이스
     * ArrayContainer.java : 배열을 가지고 있는 객체
     * ArrayIterator.java : 배열학목을 순서대로 접근하기 위한 iterator
-    * ReverseArrayIterator.java : 배열학목을 역순으로 접근하기 위한 iterator
+    * ReverseArrayIterator.java : 배열항목을 역순으로 접근하기 위한 iterator
 1. client : IteratorTest.java
 
 ## 참고
